@@ -18,7 +18,7 @@ main {
 .header {
   max-width: var(--media-pc);
   margin: 0 auto;
-  background-image: url(../../images/image-hero-desktop.jpg);
+  background-image: url(../images/image-hero-desktop.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -26,7 +26,7 @@ main {
 
   @media (max-width: 767px) {
     // max-width: var(--media-cell);
-    background-image: url(../../images/image-hero-mobile.jpg);
+    background-image: url(../images/image-hero-mobile.jpg);
   }
 }
 
