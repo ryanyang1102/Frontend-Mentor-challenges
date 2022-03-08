@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700;800&display=swap");
+:root {
+  --clr-primary-dark: hsl(300, 43%, 22%);
+  --clr-primary-pink: hsl(333, 80%, 67%);
+  --clr-primary-darkGray: hsl(303, 10%, 53%);
+  --clr-primary-lightGray: hsl(300, 24%, 96%);
+  --clr-primary-white: hsl(0, 0%, 100%);
+  --ff-primary: 'Spartan', sans-serif;
+  --fs-400: .8125rem;
+  --fs-500: .9625rem;
+  --fs-900: 2rem;
+  --br: .5rem;
+}
+
+@media (min-width: 50em) {
+  :root {
+    --fs-900: 3rem;
+  }
+}
+
+/* Box sizing rules */
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class], ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+  padding-top: 5rem;
+  text-align: center;
+}
+
+@media (min-width: 50em) {
+  body {
+    padding-top: 7.5rem;
+  }
+}
+
+h1 {
+  font-size: var(--fs-900);
+  color: var(--clr-primary-dark);
+  line-height: 1;
+  max-width: 12ch;
+  margin-bottom: .5em;
+  font-weight: 800;
+}
+
+@media (max-width: 50em) {
+  h1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.lead {
+  font-size: var(--fs-500);
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  gap: 3rem 1rem;
+}
+
+@media (min-width: 50em) {
+  main {
+    -ms-grid-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 1.5fr;
+    text-align: left;
+  }
+  .intro {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .ratings {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .quotes {
+    grid-column: 1 / -1;
+  }
+}
+
+.container {
+  max-width: 70rem;
+  padding: 0 2em;
+  margin: 0 auto;
+}
+
+.flow-content > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+@media (min-width: 50em) {
+  .split {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.a-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quotes {
+  --spacer: 2rem;
+}
+
+.quotes > li:nth-child(2) {
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
+}
+
+.quotes > li:nth-child(3) {
+  -webkit-transform: translateY(6rem);
+          transform: translateY(6rem);
+}
+
+.quotes blockquote {
+  max-width: 25rem;
+  height: 100%;
+  background-color: var(--clr-primary-dark);
+  color: var(--clr-primary-lightGray);
+  text-align-last: left;
+  border-radius: var(--br);
+  padding: var(--spacer);
+  margin: 0 auto;
+}
+
+.quotes img {
+  width: 3rem;
+  border-radius: 50%;
+}
+
+@media (min-width: 50em) {
+  .quotes img {
+    margin-right: var(--spacer);
+  }
+}
+
+.quotes .name {
+  font-weight: 800;
+}
+
+.quotes .status {
+  color: var(--clr-primary-pink);
+}
+
+.quotes .quote {
+  margin-top: var(--spacer);
+}
+
+.ratings {
+  line-height: 1;
+}
+
+.ratings li {
+  max-width: 25rem;
+  color: var(--clr-primary-dark);
+  background-color: var(--clr-primary-lightGray);
+  font-weight: 800;
+  padding: .75rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: var(--br);
+}
+
+@media (min-width: 50em) {
+  .ratings li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .ratings li::before {
+    margin: 0 1.5rem 0 0;
+  }
+  .ratings li:first-of-type {
+    -webkit-transform: translateX(-2.5rem);
+            transform: translateX(-2.5rem);
+  }
+  .ratings li:last-of-type {
+    -webkit-transform: translateX(2.5rem);
+            transform: translateX(2.5rem);
+  }
+}
+
+.ratings img {
+  margin: 0 .5rem .5rem;
+}
+
+@media (min-width: 50em) {
+  .ratings img {
+    margin: -.25rem .5rem 0 0;
+  }
+}
+
+.stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}

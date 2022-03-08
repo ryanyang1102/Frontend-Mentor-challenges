@@ -1,0 +1,44 @@
+.quotes {
+  --spacer: 2rem;
+
+  > li {
+    &:nth-child(2) {
+      transform: translateY(3rem);
+    }
+
+    &:nth-child(3) {
+      transform: translateY(6rem);
+    }
+  }
+  blockquote {
+    max-width: 25rem;
+    height: 100%;
+    background-color: var(--clr-primary-dark);
+    color: var(--clr-primary-lightGray);
+    text-align-last: left;
+    border-radius: var(--br);
+    padding: var(--spacer);
+    margin: 0 auto;
+  }
+
+  img {
+    width: 3rem;
+    border-radius: 50%;
+
+    @media (min-width: 50em) {
+      margin-right: var(--spacer);
+    }
+  }
+
+  .name {
+    font-weight: 800;
+  }
+
+  .status {
+    color: var(--clr-primary-pink);
+  }
+
+  .quote {
+    margin-top: var(--spacer);
+  }
+}

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700;800&display=swap');
+
+:root {
+  --clr-primary-dark: hsl(300, 43%, 22%);
+  --clr-primary-pink: hsl(333, 80%, 67%);
+
+  --clr-primary-darkGray: hsl(303, 10%, 53%);
+  --clr-primary-lightGray: hsl(300, 24%, 96%);
+  --clr-primary-white: hsl(0, 0%, 100%);
+
+  --ff-primary: 'Spartan', sans-serif;
+
+  --fs-400: .8125rem;
+  --fs-500: .9625rem;
+  --fs-900: 2rem;
+
+  --br: .5rem;
+
+  @media (min-width: 50em) {
+    --fs-900: 3rem;
+  }
+}

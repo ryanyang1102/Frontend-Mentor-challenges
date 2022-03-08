@@ -1,0 +1,55 @@
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+  padding-top: 5rem;
+  text-align: center;
+
+  @media (min-width: 50em) {
+    padding-top: 7.5rem;
+  }
+}
+
+h1 {
+  font-size: var(--fs-900);
+  color: var(--clr-primary-dark);
+  line-height: 1;
+  max-width: 12ch;
+  margin-bottom: .5em;
+  font-weight: 800;
+
+  @media (max-width: 50em) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.lead {
+  font-size: var(--fs-500);
+}
+
+// Layout stuff
+
+main {
+  display: grid;
+  gap: 3rem 1rem;
+}
+
+@media (min-width: 50em) {
+  main {
+    grid-template-columns: 1fr 1.5fr;
+    text-align: left;
+  }
+
+  .intro {
+    grid-column: 1 / 2;
+  }
+  .ratings {
+    grid-column: 2 / 3;
+    align-self: center;
+  }
+  .quotes {
+    grid-column: 1 / -1;
+  }
+}
+
+

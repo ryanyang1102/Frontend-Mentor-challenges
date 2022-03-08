@@ -1,0 +1,93 @@
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-primary);
+}
+
+.wrap {
+  margin: 0 auto 5rem;
+}
+
+main {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.header {
+  max-width: var(--media-pc);
+  margin: 0 auto;
+  background-image: url(/images/image-hero-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+
+  @media (max-width: 767px) {
+    // max-width: var(--media-cell);
+    background-image: url(/images/image-hero-mobile.jpg);
+  }
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2, h3 {
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+p {
+  line-height: 2;
+  color: var(--clr-gray);
+  margin-bottom: 2rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+label {
+  position: relative;
+}
+span {
+  font-weight: border;
+  font-size: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+  &::before, &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+span.radio {
+  &::before {
+    left: -30px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid var(--clr-gray);
+    transition: border .25s linear;
+  }
+  &::after {
+    left: -24px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    transition: background-color .25s linear;
+  }
+}
+input[type="radio"]:checked + label span.radio::before {
+  border: 3px solid var(--clr-cyan-200);
+}
+input[type="radio"]:checked + label span.radio::after {
+  background-color: var(--clr-cyan-200);
+}
